@@ -111,7 +111,7 @@ export async function generateMessage(
 Personality: ${personaDescription}
 
 IMPORTANT RULES:
-1. Write ONLY at JLPT ${jlptLevel} level: ${levelDesc}
+1. Write ONLY at JLPT ${jlptLevel} level
 2. Keep messages short (1-2 sentences for N5-N4, up to 3 for higher levels)
 3. Stay in character as ${personaName}
 4. Be conversational and natural

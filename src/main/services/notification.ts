@@ -1,10 +1,8 @@
 import { Notification, BrowserWindow } from 'electron';
-import { join } from 'path';
 import { getDatabase, schema } from '../database';
 import { eq } from 'drizzle-orm';
 import { emitEvent } from './events';
-
-const iconPath = join(__dirname, '../../resources/icon.png');
+import iconPath from '../../../resources/icon.png?asset';
 
 function getGradeLabel(grade: string): string {
   const labels: Record<string, string> = {

@@ -41,7 +41,7 @@ export function clearToasts(): void {
 }
 
 export function getToasts() {
-  return toasts;
+  return toasts();
 }
 
 // Convenience functions
