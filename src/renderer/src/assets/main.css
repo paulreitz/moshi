@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Colors - Dark theme with purple/indigo accent */
+  --color-bg-primary: #0f0f14;
+  --color-bg-secondary: #16161e;
+  --color-bg-tertiary: #1e1e2a;
+  --color-bg-elevated: #252532;
+  --color-bg-hover: #2a2a3a;
+
+  --color-border-default: #2e2e3e;
+  --color-border-muted: #252532;
+  --color-border-accent: #6366f1;
+
+  --color-text-primary: #f0f0f5;
+  --color-text-secondary: #a0a0b0;
+  --color-text-muted: #6b6b7b;
+  --color-text-inverse: #0f0f14;
+
+  /* Accent colors - Indigo/Purple */
+  --color-accent-primary: #6366f1;
+  --color-accent-primary-hover: #818cf8;
+  --color-accent-primary-muted: #4f46e5;
+
+  /* Semantic colors */
+  --color-success: #22c55e;
+  --color-success-muted: #16a34a;
+  --color-warning: #f59e0b;
+  --color-warning-muted: #d97706;
+  --color-error: #ef4444;
+  --color-error-muted: #dc2626;
+  --color-info: #3b82f6;
+  --color-info-muted: #2563eb;
+
+  /* Grade colors for reviews */
+  --color-grade-excellent: #22c55e;
+  --color-grade-good: #3b82f6;
+  --color-grade-fair: #f59e0b;
+  --color-grade-needs-work: #ef4444;
+
+  /* JLPT level colors */
+  --color-jlpt-n5: #22c55e;
+  --color-jlpt-n4: #3b82f6;
+  --color-jlpt-n3: #a855f7;
+  --color-jlpt-n2: #f59e0b;
+  --color-jlpt-n1: #ef4444;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-glow: 0 0 20px rgb(99 102 241 / 0.3);
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Font family */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-japanese: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+
+  /* Spacing */
+  --spacing-sidebar: 16rem;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  body {
+    min-height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Japanese text styling */
+  .japanese {
+    font-family: var(--font-japanese);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-bg-hover);
+    border-radius: var(--radius-full);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-default);
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-primary);
+  }
+}
+
+/* Component utilities */
+@layer utilities {
+  .drag-region {
+    -webkit-app-region: drag;
+  }
+
+  .no-drag {
+    -webkit-app-region: no-drag;
+  }
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `settings` ADD `use_kanji` integer DEFAULT false NOT NULL;
